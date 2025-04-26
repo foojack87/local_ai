@@ -5,8 +5,9 @@ services:
     tty: true
     volumes:
       - ./ollama:/root/.ollama
-    devices:
-      - nvidia.com/gpu=all
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
     networks:
       - backend
   open-webui:
