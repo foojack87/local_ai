@@ -1,6 +1,7 @@
 # Local AI: Ollama + Open WebUI with GPU Support
 
 This guide helps you set up [Ollama](https://ollama.com) with [Open WebUI](https://github.com/open-webui/open-webui) on a Linux system using Docker, with GPU acceleration (NVIDIA).
+This version intentionally binds to localhost to keep setup private and limit access strictly to your machine.
 
 ---
 
