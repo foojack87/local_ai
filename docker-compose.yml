@@ -1,0 +1,27 @@
+services:
+  ollama:
+    image: docker.io/ollama/ollama:${OLLAMA_DOCKER_TAG-latest}
+    restart: always
+    tty: true
+    volumes:
+      - ./ollama:/root/.ollama
+    devices:
+      - nvidia.com/gpu=all
+    networks:
+      - backend
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:${WEBUI_DOCKER_TAG-main}
+    restart: always
+    depends_on:
+      - ollama
+    ports:
+      - ${OPEN_WEBUI_PORT-3000}:8080
+    volumes:
+      - ./open-webui:/app/backend/data
+    environment:
+      - 'OLLAMA_BASE_URL=http://ollama:11434'
+    networks:
+      - backend
+
+networks:
+  backend:
