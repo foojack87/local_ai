@@ -8,9 +8,7 @@ This version intentionally binds to localhost to keep setup private and limit ac
 ## ✅ Prerequisites
 
 - Ubuntu (native or WSL2)
-- Docker & Docker Compose installed
 - NVIDIA GPU
-- NVIDIA Container Toolkit (`nvidia-docker2`)
 
 ---
 
