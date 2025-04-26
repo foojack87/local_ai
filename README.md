@@ -9,9 +9,7 @@ This version intentionally binds to localhost to keep setup private and limit ac
 
 - Ubuntu (native or WSL2)
 - Docker & Docker Compose installed
-- NVIDIA GPU (e.g. RTX 3060 Ti)
-- NVIDIA drivers (v565+)
-- CUDA 12.x compatible
+- NVIDIA GPU
 - NVIDIA Container Toolkit (`nvidia-docker2`)
 
 ---
